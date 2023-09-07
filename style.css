@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@300&family=Outfit:wght@300;400&family=Poppins:wght@300&family=Roboto:wght@300;500&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --orange-color: #e38826;
+  --cyan-color: #006970;
+  --dark-cyan-color: #004241;
+}
+
+body {
+  /* position: relative; */
+  width: 100%;
+}
+
+.preview-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 25px;
+}
+
+.preview-container .container {
+  padding: 15px;
+  max-width: 992px;
+}
+
+.container .preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 860px) {
+  .container .preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 860px) {
+  .preview-container {
+    height: 100%;
+  }
+}
+
+.preview-grid .preview-item {
+  width: 100%;
+}
+.preview-grid .item-orange {
+  background-color: var(--orange-color);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.preview-grid .item-cyan {
+  background-color: var(--cyan-color);
+}
+.preview-grid .item-dark-cyan {
+  background-color: var(--dark-cyan-color);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+@media (max-width: 860px) {
+  .preview-grid .item-orange {
+    border-radius: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .preview-grid .item-dark-cyan {
+    border-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+
+.preview-item .preview-body {
+  padding: 30px;
+}
+@media (max-width: 560px) {
+  .preview-item .preview-body {
+    /* padding: 25px; */
+  }
+}
+
+.preview-body .preview-img {
+  width: 100%;
+}
+.preview-img img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.preview-body .preview-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.preview-title h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.preview-body .preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.preview-body .preview-description {
+  margin-bottom: 2rem;
+}
+.preview-description p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffffbf;
+}
+
+.preview-body .preview-action {
+  width: 100%;
+}
+.preview-action button {
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 5px 30px;
+  height: 45px;
+  background-color: #ffff;
+  transition: 0.4s all;
+}
+.preview-action button:hover {
+  background-color: transparent;
+  border: 2px solid #ffffffbf;
+  color: #ffffffbf;
+}
+@media (max-width: 560px) {
+  .preview-action button {
+    display: block;
+  }
+}
+.preview-action .btn-orange {
+  color: var(--orange-color);
+}
+.preview-action .btn-cyan {
+  color: var(--cyan-color);
+}
+.preview-action .btn-dark-cyan {
+  color: var(--dark-cyan-color);
+}
